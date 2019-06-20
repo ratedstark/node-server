@@ -8,23 +8,19 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
 app.get('/usuario/:id',function(req,res){
-    res.json("works")
+    res.json("get works")
 });
 
-app.post('/usuario',function(req,res){
-   let body = req.body;
-    res.json({
-        body
-    });
-
+app.post('/',function(req,res){
+   res.json("post");
 });
 
-app.put('/usuario',function(req,res){
-    res.json("works")
+app.put('/',function(req,res){
+    res.json("put works")
 });
 
-app.delete('/usuario',function(req,res){
-    res.json("works")
+app.delete('/',function(req,res){
+    res.json(" delete works")
 });
 
 app.listen(process.env.PORT,()=>{
